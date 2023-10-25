@@ -1,8 +1,10 @@
-import requests, json, argparse
+import requests, json, argparse, os
 import dateutil.relativedelta
 from datetime import date, timedelta
 from textblob import TextBlob
 from random import sample
+
+TOKEN = os.environ["token"]
 
 class Util():
 
@@ -34,7 +36,7 @@ class MadlibGame(Util):
         from_date: The date from which we are searching
         to_date: The date to which we are searching
         """
-        url = (f'https://newsdata.io/api/1/news?apikey={args.config["token"]}&'
+        url = (f'https://newsdata.io/api/1/news?apikey={TOKEN}&'
             f'qInTitle={args.config["query"]}&'
             f'language=en&'
             f'from_date={from_date}&'

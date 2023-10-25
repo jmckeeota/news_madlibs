@@ -1,0 +1,25 @@
+name: Run Script
+
+on:
+  workflow_dispatch
+
+env:
+  token: ${{ secrets.TOKEN }}
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9.17'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m textblob.download_corpora
+          python news_madlibs.py
