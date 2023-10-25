@@ -1,0 +1,2 @@
+## Madlib game
+A game that fetches a current news article based on criteria from config.json and replaces random words in each sentence of the article with user input.  The user is prompted for a word corresponding to the part of speech of the word he or she will be replacing.

@@ -1,0 +1,10 @@
+{
+    "eligable_parts_of_speech": {
+        "VBG": "Verb, present tense",
+        "VBD": "Verb, past tense",
+        "VBN": "Verb, past participle",
+        "NN": "Noun"
+    },
+    "token": "",
+    "query": "pizza"
+}
